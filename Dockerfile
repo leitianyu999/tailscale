@@ -21,7 +21,6 @@ WORKDIR /app
 RUN apt-get update && \
     apt-get install -y openssl curl
 
-COPY build_cert.sh /app/
 COPY --from=builder /app/derper /app/derper
 
 # build self-signed certs && start derper
